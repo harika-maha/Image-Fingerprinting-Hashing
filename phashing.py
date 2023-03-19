@@ -15,7 +15,8 @@ for i in range(len(img_paths)):
         img2 = Image.open(img2_path)
         hash1 = imagehash.phash(img1)
         hash2 = imagehash.phash(img2)
-        if hash1 == hash2:
+        # print(hash1, hash2)
+        if hash1 - hash2 < 10:
             # Display similar images
             fig, axs = plt.subplots(1, 2)
             axs[0].imshow(img1)
