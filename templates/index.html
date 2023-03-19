@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <title>Search</title>
+    <style>
+      * {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.wallpapersafari.com%2F24%2F9%2FoD7Uyg.jpg&f=1&nofb=1&ipt=1c58fe19698b791b9f1622bc9bb00e9e63dcf0a331410d4e12ab076fc70a9024&ipo=images");
+        background-size: cover;
+      }
+      h1 {
+        margin-top: 20%;
+        padding: 20px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 50px;
+      }
+      p {
+        font-style: oblique;
+        padding: 10px;
+        font-weight: bold;
+        font-size: 30px;
+      }
+      label.label input[type="file"] {
+        position: absolute;
+        top: -1000px;
+      }
+      .label {
+        cursor: pointer;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        padding: 5px 15px;
+        margin: 5px;
+        background: #dddddd;
+        display: inline-block;
+      }
+      .label:hover {
+        background: #5cbd95;
+      }
+      .label:active {
+        background: #9fa1a0;
+      }
+      .label:invalid + span {
+        color: #000000;
+      }
+      .label:valid + span {
+        color: #ffffff;
+      }
+      .btn {
+        flex: 1 1 auto;
+        margin: 10px;
+        padding: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+      }
+      .btn:hover {
+        background-position: right center;
+      }
+      .sub {
+        background-image: linear-gradient(
+          to right,
+          #ed80ce 0%,
+          #7ea1dd 51%,
+          #fbc2eb 100%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Reverse Image Search</h1>
+    <form action="/form" method="post">
+      <p>Upload your file here!</p>
+      <br />
+      <label class="label">
+        <input type="file" id="testImage" name="testImage" />
+        <span>Select a File</span>
+      </label>
+      <br /><br />
+      <input type="submit" value="Submit" id="sub" class="btn sub" />
+    </form>
+  </body>
+</html>
